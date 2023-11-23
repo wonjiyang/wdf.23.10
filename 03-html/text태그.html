@@ -8,20 +8,184 @@
     <body>
         <h1>text태그 : html</h1>
 
-        <h2>heading</h2>
+        <h2>Heading(제목)</h2>
+        <!--대체적으로 h1은 페이지 제목(각 페이지별로 달아줘야함, 하위요소들을 순서대로 h2, h3로 표시, 크기를 표현하기 위해 쓰지 말것, 제일 중요)-->
             <p>-제목을 나타내는 태그</p>
-        <div>
-            <h1>h1</h1>
-            <h2>h2</h2>
-            <h3>h3</h3>
-            <h4>h4</h4>
-            <h5>h5</h5>
-            <h6>h6</h6>
-        </div>
+            <div>
+                <h1>h1</h1>
+                <h2>h2</h2>
+                <h3>h3</h3>
+                <h4>h4</h4>
+                <h5>h5</h5>
+                <h6>h6</h6>
+            </div>
         <hr />
 
-        <h2>Paragraphs (단락)</h2>
+        <h2>Paragraphs(단락)</h2>
 
-        <h3>-문단 태그</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, accusantium ratione itaque debitis molestias consequuntur id, est architecto saepe esse, laboriosam impedit commodi alias non excepturi dolore nihil aut autem?</p>
+        <h3>-문단(Block)</h3>
+        <!--한줄씩 띄어써지는 Block Tag(밑으로 쌓여짐)-->
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                Pariatur, accusantium ratione itaque debitis molestias consequuntur id, est architecto saepe esse, <br>
+                laboriosam impedit commodi alias non excepturi dolore nihil aut autem?</p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam, officia?</p>
+            <pre>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+Quisquam, libero, nemo odit illo tempore aspernatur iusto aliquam eos mollitia, accusamus adipisci rem natus voluptatem. 
+Mollitia animi unde impedit minus natus!</pre>
+
+        <h3>-인라인(inline)</h3>
+        <!--한줄로 이어서 써지는 Inline Tag(어느부분을 감싸서 스타일을 적용함)-->
+            <div>
+                <strong style="display: block;">중요한 글씨</strong>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Temporibus aliquam quibusdam ipsam,
+                <b>repellat nemo aperiam?</b>
+                <span style="color: aqua;">날짜 : 2023-11-23</span>
+                <em style="font-style: normal;">가나다라마바사</em>
+                <mark>mark</mark>
+            </div><br>
+        <hr />
+
+        <h2>List(목록)</h2>
+
+        <h3>-순서가 없는 목록(ul)</h3>
+        <!--가장 많이 쓰는 Ul Tag(기본적으로 검정원으로 표시됨, nav, tab를 코딩할 때)-->
+            <ul>
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+            </ul>
+
+        <h3>-순서가 없는 목록(ol)</h3>
+        <!--순위가 있어야 쓰는 Ol Tag(기본적으로 숫자로 표시됨)-->
+            <ol>
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+            </ol>
+
+        <h3>-정의 목록(dl)</h3>
+        <!--용어를 정의하고 설명하는 태그-->
+            <dl>
+                <dt>정의 제목</dt>
+                <dd>-정의 설명1</dd>
+                <dd>-정의 설명2</dd>
+                <dt>정의 제목</dt>
+                <dd>-정의 설명1</dd>
+                <dd>-정의 설명2</dd>
+            </dl>
+
+        <h3>-네비게이션 구조(정답)</h3>
+            <!--depth1-->
+            <ul>
+                <li>
+                    menu1
+                    <!--depth2-->
+                    <ul>
+                        <li>
+                            menu1-1
+                            <!--depth3-->
+                            <ul>
+                                <li>menu1-1-1</li>
+                                <li>menu1-1-2</li>
+                                <li>menu1-1-3</li>
+                            </ul>
+                        </li>
+                        <li>menu1-2</li>
+                        <li>menu1-3</li>
+                    </ul>
+                </li>
+                <li>
+                    menu2
+                    <ul>
+                        <li>menu2-1</li>
+                        <li>menu2-2</li>
+                        <li>menu2-3</li>
+                    </ul>
+                </li>
+                <li>
+                    menu3
+                    <ul>
+                        <li>menu3-1</li>
+                        <li>menu3-2</li>
+                        <li>menu3-3</li>
+                    </ul>
+                </li>
+            </ul>
+
+        <h3>-네비게이션 링크 연결(정답)</h3>
+            <ul>
+                <li>
+                    <a href="#">menu1</a>
+                    <ul>
+                        <li><a href="#">menu1-1</a></li>
+                        <li><a href="#">menu1-2</a></li>
+                        <li><a href="#">menu1-3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">menu2</a>
+                    <ul>
+                        <li><a href="#">menu2-1</a></li>
+                        <li><a href="#">menu2-2</a></li>
+                        <li><a href="#">menu2-3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">menu3</a>
+                    <ul>
+                        <li><a href="#">menu3-1</a></li>
+                        <li><a href="#">menu3-2</a></li>
+                        <li><a href="#">menu3-3</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <hr />
+        
+        <h2>Table(표)</h2>
+        
+            <table border="1">
+                <caption>테이블 제목</caption>
+                <colgroup>
+                    <col span="2" width="20%" />
+                    <col span="2" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>시험</th>
+                        <th colspan="3">과목</th>
+                    </tr>
+                    <tr>
+                        <th>중간고사</th>
+                        <th>국어</th>
+                        <th>수학</th>
+                        <th>영어</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th rowspan="2">A</th>
+                        <td>90</td>
+                        <td>80</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>70</td>
+                        <td>100</td>
+                        <td>90</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>평균</th>
+                        <td>80</td>
+                        <td>90</td>
+                        <td>95</td>
+                    </tr>
+                </tfoot>
+            </table>
+
     </body>
