@@ -13,8 +13,60 @@
     <form action="">
         <fieldset>
             <legend>폼 타이틀</legend>
-            아이디 <input type="text"> <br> <br>
-            <label for="name">이름</label> <input type="text" id="name" name="name">
+            아 &nbsp; 이 &nbsp; 디 &amp;<input type="text" title="아이디" maxlength="8" placeholder="아이디를 입력하세요." required autofocus autocomplete="on"> <br> <br>
+
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" value="abcd" required> <br> <br>
+
+            <label for="pw">비밀번호</label>
+            <input type="password" id="pw" name="pw" required> <br> <br>
+
+            라디오
+            <input type="radio" name="group" id="html">
+            <label for="html">html</label>
+            <input type="radio" name="group" id="css">
+            <label for="css">css</label>
+            <input type="radio" name="group" id="js">
+            <label for="js">js</label> <br> <br>
+
+            체크박스
+            <input type="checkbox" name="consent1" id="consent1">
+            <label for="consent1">동의1</label>
+            <input type="checkbox" name="consent2" id="consent2">
+            <label for="consent2">동의2</label>
+            <input type="checkbox" name="consent3" id="consent3">
+            <label for="consent3">동의3</label> <br> <br>
+
+            <label for="email">이메일</label>
+            <input type="email" name="email" id="email" size="50" readonly> <br> <br>
+
+            <label for="file">첨부파일 </label>
+            <input type="file" name="file" id="file"> <br> <br>
+
+            <label for="nummber">숫자</label>
+            <input type="number" name="number" id="number" disabled> <br> <br>
+
+            <label for="sel">계절선택</label>
+            <select name="sel" id="sel" multiple>
+                <option value="봄">봄</option>
+                <option value="여름" selected>여름</option>
+                <option value="가을">가을</option>
+                <option value="겨울">겨울</option>
+            </select> <br> <br>
+
+            <label for="text">글쓰기</label>
+            <textarea name="text" id="text" cols="30" rows="10" placeholder="50자 이내로 작성하시오."></textarea> <br> <br>
+
+            <!--기능이 없는 버튼-->
+            <!--a(하이퍼링크) : 페이지 전환용-->
+            <!--input:button, button : 동적 처리-->
+
+            <input type="button" value="input 타입">
+            <button><b>button 타입</b></button><br> <br>
+
+            <input type="submit" value="내용 전송">
+            <input type="reset" value="취소">
+
         </fieldset>
     </form>
 </body>
