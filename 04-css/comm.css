@@ -1,0 +1,78 @@
+ * {
+    color: #8d5409;
+}
+
+.desc2 {
+    font-size: 40px;
+    color: lightsalmon;
+    font-weight: bold;
+}
+
+.desc1 {
+    color: cadetblue;
+}
+
+p.desc1 {
+    color: cornflowerblue;
+}
+
+#main {
+    width: 500px;
+    height: 700px;
+    background-color: palevioletred;
+}
+
+.header {
+    background-color: lightgrey;
+}
+
+.header.dark {
+    background-color: darkgray;
+}
+
+.header .depth1 {
+    background-color: blueviolet;
+}
+
+.depth1 li {
+    background-color: yellowgreen;
+}
+
+.depth1 > li {
+    background-color: orange;
+}
+
+.depth1 > li > a {
+     color: blue;
+}
+
+#gnb .depth2 a {
+    color: brown;
+}
+
+#gnb .depth2 a:hover {
+    background-color: black;
+}
+
+.input {
+    width: 300px;
+    height: 100px;
+    background-color: plum;
+}
+
+.input:focus {
+    background-color: white;
+    color: plum;
+}
+
+.bbs li a {
+    color: #5e0948;
+}
+
+.bbs li:first-child {
+    background-color: #3b5b96;
+}
+
+.bbs li:first-child a {
+    color: lightblue;
+}
