@@ -1,4 +1,8 @@
- * {
+@import url(fonts.css);
+
+@import url(reset.css);
+ 
+* {
     color: #8d5409;
 }
 
@@ -106,7 +110,7 @@ p.desc1 {
     display: block;
     width: 50px;
     height: 50px;
-    background: url(./images/mobile_212852414260.png);
+    background: url(/images/mobile_212852414260.png);
     background-size: 100%;
 }
 
@@ -115,7 +119,7 @@ p.desc1 {
     display: block;
     width: 50px;
     height: 50px;
-    background: url(./images/mobile_212852414260.png);
+    background: url(/images/mobile_212852414260.png);
     background-size: 100%;
 }
 
@@ -156,3 +160,45 @@ p.desc1 {
 .icon li:first-child a::after {
     content: '+';
 }
+
+/*font*/
+
+.font-size1 {
+    font-size: 20px;
+}
+
+.font-size2 {
+    font-size: 1.25em;
+    /*부모 기준*/
+    /*12px 기준 1.25em은 15px*/
+}
+
+.font-size3 {
+    /*20px*/
+    font-size: 1.666em;
+}
+
+.font-size4 {
+    font-size: 1em;
+}
+
+.font-size5 {
+    font-size: 1.666rem;
+}
+
+.font-size6 {
+    font-size: 1.666rem ;
+}
+
+.font-size7 {
+    font-size: 10vw;
+}
+
+.font-f1 {
+    font-family: 'Sofia', cursive;
+}
+
+.font-f2 {
+    font-family: 'Nova Square', sans-serif;
+}
+
