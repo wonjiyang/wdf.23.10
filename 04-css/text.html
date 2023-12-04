@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text</title>
+</head>
+<body>
+    <h1>text</h1>
+    
+    <div class="text1">글씨 정렬</div>
+    <style>
+        .text1 {
+            width: 500px;
+            background-color: yellow;
+        }
+    </style>
+
+    <div class="text2">가운데 정렬</div>
+    <style>
+        .text2 {
+            width: 500px;
+            background-color: magenta;
+            text-align: center;
+        }
+    </style>
+
+    <!--div는 block요소-->
+    <div class="box1">
+        <span class="box2">inline 요소</span>
+    </div>
+    <style>
+        .box1 {
+            text-align: center;
+            height: 200px;
+            width: 500px;
+            background-color: lightblue;
+        }
+        .box2 {
+            height: 100px;
+            width: 100px;
+            line-height: 200px;
+            background-color: lightcoral;
+        }
+    </style>
+
+    <h2>vertical-align: middle;</h2>
+
+    <img src="./images/다운로드.png" alt="네이버웨일" class="img-w"> 네이버 웨일
+    <style>
+        .img-w {
+            /*display: block; 블럭 요소는 불가능, 인라인 요소만 가능*/
+            vertical-align: middle;
+        }
+    </style>
+
+    <h2>text decoration &#38; text transform</h2>
+
+    <a href="#">goto</a>
+    <style>
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    </style>
+
+    <h2>text indentation</h2>
+
+    <div class="indent">글씨 날리기</div>
+    <!--일반은 안보이고 시각장애인에게 들리게-->
+    <style>
+        .indent {
+            text-indent: -9999px;
+        }
+    </style>
+
+    <h2>line height &#38; letter spacing</h2>
+
+    <div class="txt1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, quae.</div>
+    <style>
+        .txt1 {
+            font-size: 100px;
+            line-height: 1;
+            letter-spacing: -3px;
+        }
+    </style>
+
+    <h2>white space</h2>
+
+    <div class="txt2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro dolorum nemo minus rem corrupti consequuntur blanditiis neque quia at sapiente.</div>
+    <style>
+        .txt2 {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    </style>
+</body>
+</html>
