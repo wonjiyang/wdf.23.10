@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,8 +29,14 @@
     <div class="bg2"></div>
     <style>
         .bg2 {
-            height: 300px;
-            background-image: url(./images/map.jpg);
+            height: 450px;
+            /*background-image: url(./images/map.jpg);
+            background-position: -700px -0;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: yellow;*/ 
+
+            background: yellow url(./images/map.jpg) no-repeat -700px 0 fixed;
         }
     </style>
 
@@ -45,5 +51,64 @@
         }
     </style>
 
+    <h2>background-size</h2>
+
+    <div class="bg4"></div>
+    <div class="bg5"></div>
+    <style>
+        .bg4 {
+            width: 300px;
+            height: 100px;
+            background: lavenderblush url(./images/youtube.png) no-repeat 50% 50%;
+            /*background-size: 100% auto;*/
+            background-size: contain;
+            /*배경이 잘리지 않고 박스 안에 배경을 모두 보이게끔(로고, 이미지)*/
+        }
+        .bg5 {
+            width: 300px;
+            height: 300px;
+            background: lightcyan url(./images/map.jpg) no-repeat 0 0 / cover;
+            /*cover : 배경을 채울 때*/
+        }
+    </style>
+
+    <h2>image sprites</h2>
+
+    <a href="#" class="link home" >홈</a>
+    <a href="#" class="link prev">이전</a>
+    <a href="#" class="link next">다음</a>
+    <style>
+        .link {
+            display: inline-block;
+            height: 44px;
+            text-indent: -9999px;
+            background-image: url(./images/img_navsprites.gif);
+            background-repeat: no-repeat;
+        }
+        .home {
+            width: 46px;
+            background-position: 0 0;
+        }
+        .prev {
+            width: 43px;
+            background-position: -47px 0;
+        }
+        .next {
+            width: 43px;
+            background-position: -91px 0;
+        }
+    </style>
+
+    <div class="webtoon">네이버 웹툰</div>
+    <style>
+        .webtoon { 
+            width: 63px;
+            height: 59px;
+            background-image: url(./images/sp_main.752c7542.png);
+            background-repeat: no-repeat;
+            background-position: -462px -434px;
+            text-indent: -9999px;
+        }
+    </style>
 </body>
 </html>
