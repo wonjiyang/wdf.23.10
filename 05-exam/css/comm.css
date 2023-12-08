@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     line-height: 1.5;
-    font-size: 16px;
+    font-size: 15px;
     text-decoration: none;
     color: #222328;
     list-style: none;
@@ -14,7 +14,7 @@
     margin: auto;
 }
 
-header {
+#header {
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -28,8 +28,15 @@ header {
     height: 40px;
 }
 
+
+
 #gnb .depth1 {
     display: flex;
+}
+
+#gnb .depth1:hover .depth2 {
+    display: block;
+    background-color: rgb(255, 255, 255);
 }
 
 #gnb .depth2 {
@@ -51,4 +58,81 @@ header {
 
 .slide ul img {
     display: block;
+}
+
+#main {
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    gap: 12px;
+}
+
+.sec-g {
+    /* width: 33.333%; */
+    flex-grow: 1;
+    /* 1: true(참) 0: false(거짓)*/
+    flex-basis: 0;
+    padding: 10px 0;
+}
+
+.sec-g .sec-tit {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+
+.sec-bbs .list-bbs li {
+    display: flex;
+    align-items: center;
+}
+
+.sec-bbs .list-bbs li::before {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 3px;
+    margin-right: 8px;
+    background-color: lightslategray;
+}
+
+.sec-bbs .list-bbs a {
+    display: block;
+    padding: 3px 0;
+}
+
+.sec-goto .sec-tit,
+.sec-bnr .sec-tit {
+    text-indent: -9999px;
+    line-height: 0;
+    font-size: 0;
+    margin-bottom: 0;
+}
+
+.sec-goto .list-goto {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+.sec-goto .list-goto li {
+    width: 48%;
+    height: 48%;
+}
+
+.list-goto a {
+    display: block;
+    height: 100%;
+    text-align: center;
+    line-height: 86.39px;
+    background-color: lightgrey;
+}
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+    border-top: 1px solid #e7e7e7;
 }
