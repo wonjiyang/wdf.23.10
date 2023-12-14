@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+</head>
+<body>
+    <h1>float</h1>
+
+    <h2>float : left</h2>
+
+    <div class="box1">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+    </div>
+
+   
+
+    <h2>float layout</h2>
+    <div class="wrap">
+        <header id="header">
+            <h1 id="logo">logo</h1>
+            <nav id="gnb">
+                <ul>
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                    <li>menu4</li>
+                </ul>                
+            </nav>
+        </header>
+        <div class="slide">
+            <ul>
+                <li>slide1</li>
+                <li>slide2</li>
+                <li>slide3</li>
+            </ul>
+        </div>
+        <main id="main">
+            <section class="sec-g">공지사항</section>
+            <section class="sec-g">배너</section>
+            <section class="sec-g">바로가기</section>
+        </main>
+        <footer id="footer">
+            <div class="ft-logo">logo</div>
+            <div class="copyright">copyright</div>
+            <div class="sns">sns</div>
+        </footer>
+    </div>
+
+    <style>
+        .wrap {
+            width: 1280px;
+            margin: 0 auto;
+        }
+
+        #header {
+            height: 100px;
+            background-color: lightblue;
+        }
+
+        #logo {
+            float: left;
+            background-color: lawngreen;
+        }
+
+        #gnb {
+            float: right;
+            background-color: lemonchiffon;
+        }
+
+        #gnb .li {
+            float: left;
+        }
+
+        #main::after {
+            content: '';
+            display: flex;
+            clear: both;
+        }
+
+        .sec-g {
+            float: left;
+            width: 30%;
+            height: 200px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+
+        .sec-g + .sec-g {
+            margin-left: 5%;
+        }
+
+        .ft-logo {
+            float: left;
+        }
+
+        .copyright {
+            width: 50%;
+            text-align: center;
+        }
+
+        .sns {
+            float: right;
+            margin-top: -20px;
+        }
+    </style>
+</body>
+</html>
