@@ -1,11 +1,25 @@
+/* 전역 변수설정 */
+:root {
+    --default: #333333;
+    --primary: lemonchiffon;
+    --white: #fff;
+    --black: #000;
+    --widthwrap: 1200px;
+    --minheight: calc(100vh - 100px - 100px - 300px);
+    --hdheigt: 100px;
+    --ftheigt: 100px;
+    --slideheigt: 300px;
+    --swiper-theme-color: #333;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     line-height: 1.5;
-    font-size: 15px;
+    font-size: 16px;
     text-decoration: none;
-    color: #333333;
+    color: var(--default);
     list-style: none;
 }
 
@@ -18,7 +32,7 @@
 }
 
 .wrap {
-    max-width: 1200px;
+    max-width: var(--widthwrap);
     margin: auto;
 }
 
@@ -48,7 +62,7 @@
     align-items: center;
     width: 200px;
     height: 40px;
-    font-size: 26px;
+    font-size: 1.625rem;
 }
 
 #gnb .depth1 {
@@ -78,7 +92,7 @@
 
 #gnb .depth2 {
     display: none;
-    background-color: #fff;
+    background-color: var(--white);
     position: absolute;
     top: 100px;
     left: 0;
@@ -145,6 +159,7 @@
     justify-content: space-between;
     height: 200px;
     gap: 12px;
+    min-height: var(--minheight);
 }
 
 .sec-g {
@@ -157,7 +172,7 @@
 
 .sec-g .sec-tit {
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .sec-bbs .list-bbs li {
@@ -206,6 +221,7 @@
     height: 100%;
     text-align: center;
     line-height: 86.39px;
+    background-color: var(--primary);
 }
 
 /* tablet */
@@ -281,14 +297,14 @@
     margin: -150px 0 0 -250px;
     padding: 50px;
     text-align: center;
-    background-color: #fff;
+    background-color: var(--white);
     border: 1px solid #9c9c9c;
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
 
 .modal .modal-hd {
     margin-bottom: 30px;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
@@ -299,19 +315,27 @@
     width: 50px;
     height: 50px;
     border-radius: 50px;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: var(--black);
+    color: var(--white);
 }
 
 .modal .btn-close::after {
     content: '\f00d';
     font-family: 'Line Awesome Free';
     font-weight: 900;
-    font-size: 20px;
+    font-size: 1.25rem;
     text-align: center;
 }
 
 .modal i {
-    color: #ffffff;
-    font-size: 20px;
+    color: var(--white);
+    font-size: 1.25rem;
 }
+
+/* body {
+    background: url(../Iphone\ Main.png) no-repeat 0 0;
+}
+
+.wrap {
+    opacity: 0.7;
+} */
