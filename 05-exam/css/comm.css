@@ -300,6 +300,10 @@
     border-top: 1px solid #e7e7e7;
 }
 
+#footer .logo img {
+    filter: grayscale(100%);    
+}
+
 /* tablet */
 @media screen and (max-width: 980px) {
     #footer {
