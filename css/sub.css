@@ -1,0 +1,27 @@
+.credit-card-box {
+  width: 400px;
+  height: 280px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+.credit-card-box:hover .flip, .credit-card-box:hover .flip {
+  transform: rotateY(180deg);
+}
+.credit-card-box .front,
+.credit-card-box .back {
+  width: 400px;
+  height: 250px;
+  background: linear-gradient(135deg, #bd6772, #53223f);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.credit-card-box .flip {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.credit-card-box .back {
+  transform: rotateY(180deg);
+}/*# sourceMappingURL=sub.css.map */

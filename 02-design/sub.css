@@ -1,0 +1,36 @@
+.credit-card-box {
+  position: relative;
+  width: 100%;
+}
+.front {
+  width: 187px;
+  height: 291px;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  background: url(./금쪽이1.png) no-repeat;
+  position: absolute;
+  transform: translateX(-50%);
+  transform-origin: 50%;
+  top: 0;
+  left: 50%;
+}
+.back {
+  width: 187px;
+  height: 291px;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  background: url(./금쪽이2.png) no-repeat;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: rotateY(180deg) translateX(-50%);
+  transform-origin: 50%;
+}
+.credit-card-box:hover .flip {
+    transform: rotateY(180deg);
+  }
+.flip {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
