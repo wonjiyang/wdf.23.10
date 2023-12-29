@@ -99,27 +99,50 @@
         <!-- <div class="swiper-scrollbar"></div> -->
         <!-- </div> -->
         <main id="main">
-            <!--공지사항-->
-            <section class="sec-g sec-bbs">
-                <h2 class="sec-tit">공지사항</h2>
-                <ul class="list-bbs">
-                    <li>
-                        <a href="#">모바일 APP설치하고 10%할인쿠폰받자!!</a>
-                    </li>
-                    <li>
-                        <a href="#">자동로그인이 자꾸 풀려요</a>
-                    </li>
-                    <li>
-                        <a href="#">품절 배송지연 보상제도</a>
-                    </li>
-                    <li>
-                        <a href="#">앱 설치 자동로그인 설정 & 푸시 알림 설정 안내</a>
-                    </li>
-                    <li>
-                        <a href="#">개인정보 처리방침 변경안내 (2021년 12월 02일 시행)</a>
-                    </li>
-                </ul>
-            </section>
+            <div id="tabs" class="tabs">
+                <!--공지사항-->
+                <section class="sec-g sec-bbs active">
+                    <h2 class="sec-tit">공지사항</h2>
+                    <ul class="list-g list-bbs">
+                        <li>
+                            <a href="#">모바일 APP설치하고 10%할인쿠폰받자!!</a>
+                        </li>
+                        <li>
+                            <a href="#">자동로그인이 자꾸 풀려요</a>
+                        </li>
+                        <li>
+                            <a href="#">품절 배송지연 보상제도</a>
+                        </li>
+                        <li>
+                            <a href="#">앱 설치 자동로그인 설정 & 푸시 알림 설정 안내</a>
+                        </li>
+                        <li>
+                            <a href="#">개인정보 처리방침 변경안내 (2021년 12월 02일 시행)</a>
+                        </li>
+                    </ul>
+                </section>
+                <!-- 갤러리 -->
+                <section class="sec-g sec-gallery">
+                    <h2 class="sec-tit">갤러리</h2>
+                    <ul class="list-g list-gallery">
+                        <li>
+                            <a href="#">
+                                <img src="./images/thumb-gallery.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/thumb-gallery.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/thumb-gallery.jpg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
             <!--배너-->
             <section class="sec-g sec-bnr">
                 <h2 class="sec-tit">배너</h2>
@@ -165,7 +188,7 @@
             </div>
         </footer>
     </div>
-    <div class="dimmed">
+    <div id="modal" class="dimmed">
         <div class="modal">
             <header class="modal-hd">모달창 제목</header>
             <main class="modal-bd">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum facere expedita assumenda corrupti cum temporibus error minima illo dolorum eos iure perferendis dolor, beatae maxime vitae ipsa hic ullam voluptas.</main>
