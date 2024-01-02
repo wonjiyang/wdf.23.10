@@ -5,7 +5,6 @@
 .front {
   width: 187px;
   height: 291px;
-  border-radius: 15px;
   backface-visibility: hidden;
   background: url(./금쪽이1.png) no-repeat;
   position: absolute;
@@ -17,13 +16,12 @@
 .back {
   width: 187px;
   height: 291px;
-  border-radius: 15px;
   backface-visibility: hidden;
   background: url(./금쪽이2.png) no-repeat;
   position: absolute;
   top: 0;
   left: 50%;
-  transform: rotateY(180deg) translateX(-50%);
+  transform: rotateY(180deg) translateX(50%);
   transform-origin: 50%;
 }
 .credit-card-box:hover .flip {
