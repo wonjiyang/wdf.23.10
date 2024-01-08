@@ -162,10 +162,10 @@
     top: 0;
     left: 0;
     transition: left 0.3s;
-    /* animation: ani-slide 10s infinite linear; */
+    animation: ani-slide 10s infinite linear;
 }
 
-/* @keyframes ani-slide {
+@keyframes ani-slide {
     0% {
         left: 0;
     }
@@ -187,7 +187,7 @@
     100% {
         left: 0;
     }
-} */
+}
 
 .slide ul img {
     display: block;
