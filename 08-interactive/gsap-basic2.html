@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+        <style>
+            .sec-g {
+                border: 5px solid grey;
+                display: flex;
+                /* align-items: center; */
+                justify-content: space-around;
+                min-height: 50vh;
+                flex-direction: column;
+            }
+            .box {
+                width: 50px;
+                height: 50px;
+                border-radius: 3px;
+            }
+            .green {
+                background: greenyellow;
+                transform-origin: 0 0;
+            }
+            .purple {
+                background: purple;
+            }
+            .blue {
+                background: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="sec-g sec-basic">
+            <div class="box green"></div>
+            <div class="box purple"></div>
+            <div class="box blue"></div>
+        </div>
+        <div class="sec-g sec-timeline">
+            <div class="box green"></div>
+            <div class="box purple"></div>
+            <div class="box blue"></div>
+        </div>
+
+        <script>
+            // gsap 구문
+            // gsap.to('element', time, {option});
+            gsap.to('.sec-basic .green', 2, {rotation: 360, x: 500, scale: 3})
+            // from 상태에서 처음 상태로 돌아감
+            gsap.from('.sec-basic .purple', 2, {rotation: -360, y: 500, scale: 3})
+            gsap.fromTo('.sec-basic .blue', 2, {x: 100}, {rotation: -360, x: 500, scale: 3})
+
+            const tl = gsap.timeline();
+            tl.to('.sec-timeline .green', 2, {x: 100})
+            .to('.sec-timeline .purple', 2, {y: 100})
+            .to('.sec-timeline .blue', 2, {rotation: 360});
+        </script>
+    </body>
+</html>
