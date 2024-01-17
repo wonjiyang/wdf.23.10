@@ -1,3 +1,7 @@
+//연산자
+//산술 연산자
+//나머지 연산자(+, -, *, /, %)
+
 //덧셈 연산자
 console.log(1 + 2);
 console.log('가을' + '겨울');
@@ -19,6 +23,7 @@ console.log(7 % 3);
 //짝수, 홀수 판별 함수
 function isEven(num) {
     return num % 2 === 0;
+    // num을 2로 나눈 나머지가 0이면 true, 아니면 false
 ;}
 // 함수 호출
 console.log(isEven(2));
@@ -92,9 +97,10 @@ console.log(null ?? undefined);
 //삼항 연산자
 //조건 ? 참일 때 반환 : 거짓일 때 반환
 console.log(1 < 2 ? '참' : '거짓');
+console.log(1 > 2 ? '참' : '거짓');
 
 //ex
-function isCat() {
+function isCat(name) {
     return (
         //조건 ? 참 : 거짓
         name === '고양이' ? '고양이' : '고양이 아님'
@@ -119,13 +125,14 @@ const dogInfo = {
     ...dog,
     age : 2
 };
+console.log(dogInfo);
 
 //함수의 전개
 //...를 사용하여 파라미터(인수)를 전개할 수 있다.
 function sum(a, b, c) {
     console.log(a + b + c);
 }
-sum(5, 6, 7);nn 
+sum(5, 6, 7);
 
 //배열을 파라미터(인수)로 전달하려면?
 const num3 = [5, 6, 7];
