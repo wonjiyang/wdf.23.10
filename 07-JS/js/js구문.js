@@ -205,3 +205,41 @@ for (let user of users) {
     console.log(user);
     console.log(user.name);
 }
+
+//for in문
+//for (변수 in 객체) {실행될 코드}
+ const user3 = {
+    name: '겨울',
+    age: 2
+ }
+for (let key in user3)
+// 점 표기법
+console.log(user.name, user.age);
+//대괄호 표기법
+console.log(user3['name'], user3['age']);
+for (let key in user) {
+    console.log(key); // name age
+    console.log(user[key]); // 겨울 2
+}
+
+//while문
+//while (조건) {실행될 코드}
+//1부터 10까지 더하기
+let i = 1;
+let sum = 0;
+while (i <=10) {
+    // sum = sum + i;
+    sum += i;
+    // i = i + 1;
+    // i += 1; // i에 1을 더함
+    i++;   
+}
+console.log(sum);
+
+//do while문
+//do {실행될 코드} while (조건)
+let j = 0;
+do {
+    console.log(j);
+    j++;
+} while (j < 10);
