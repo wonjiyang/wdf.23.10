@@ -1,12 +1,10 @@
-// 함수 선언하기
-
 // 함수 선언문
 // function 함수이름 () {}
 function hello() {
     console.log('hello');
 }
 
-// 함수 표현식
+// 함수 표현문
 // const 함수이름 = function () {}
 const world = function () {
     console.log('world');
@@ -80,7 +78,6 @@ console.log(getEmail(users[2])); // 여름의 나이는 4입니다.
 console.log(getEmail(users[3])); // 봄의 나이는 5입니다.
 
 // 배열의 구조 분해 할당
-
 const animals = ['강아지', '고양이', '물고기'];
 
 // 함수 선언 (배열의 두번째 값 출력 함수)
@@ -158,3 +155,47 @@ const f = () => ({ a: 1 });
 
 // 7. 배열을 반환하는 경우
 const g = () => [1, 2];
+
+// 호출 스케줄링
+// setTimeout
+// setTimeout이란 일정 시간이 지난 후 함수를 실행한다.
+// setTimeout은 함수를 호출하면서 타이머를 설정, 인수를 전달할 수 있다.
+const timer = setTimeout(() => {
+    console.log('hello')
+}, 3000)
+
+const btnStop = document.querySelector('#btnStop')
+btnStop.addEventListener('click', () => {
+    console.log('폭탄이 정지되었습니다.')
+    clearTimeout(timer)
+})
+
+// setInterval
+// setInterval이란 일정 시간 간격으로 함수를 실행한다.
+const timer2 = setInterval(() => {
+    console.log('안녕')
+}, 3000)
+const slideStop = document.querySelector('#slideStop')
+slideStop.addEventListener('click', () => {
+    console.log('슬라이드가 정지되었습니다')
+    clearInterval(timer2)
+})
+
+// 콜백 함수
+// 콜백 함수란 함수를 인수로 전달받아 특정 시점에 호출하는 함수이다.
+const x = (props) => {
+    props()
+    console.log('X')
+}
+const y = () => {
+    console.log('Y')
+}
+x(y)
+
+// setTimeout 콜백 함수
+const sum3 = (a, b, c) => {
+    setTimeout(() => {
+        return c(a + b)
+    }, 1000)
+}
+sum3(1, 2, (value) => {console.log(value)})

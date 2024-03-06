@@ -1,5 +1,4 @@
 // 5. 배열
-
 const starbucks = ['아메리카노', '라떼', '콜드브루', '마끼아또']
 console.log(starbucks[0]);
 console.log(starbucks[3]);
@@ -124,3 +123,79 @@ for (let lover of lovers) {
 }
 console.log(`${lovers[0].name}이 나이는 ${lovers[0].age}살입니다.`)
 console.log(`${lovers[1].name}이 나이는 ${lovers[1].age}살입니다.`)
+
+// 함수
+hello()
+console.log(hello())
+function hello() {
+    console.log('안녕하세요. 선언문입니다.')
+    return '안녕하세요'
+}
+const hello2 = function() {
+    console.log('안녕하세요. 표현식입니다.')
+}
+hello()
+console.log(hello())
+hello2()
+
+function sum(a, b = 5) {
+    return a + b
+}
+console.log(sum())
+console.log(sum(1, ))
+console.log(sum(1, 3))
+console.log(sum(4))
+
+// 객체 함수 선언, 호출
+const user = {
+    name: '가을',
+    age: 2,
+}
+function getName(props) {
+    return props.name
+}
+console.log(getName(user))
+function getNameAge(props) {
+    return `${props.name}이 나이는 ${props.age}살입니다.`
+}
+console.log(getNameAge(user))
+
+// 객체 구조 분해 할당
+const user4 = {
+    name: '겨울',
+    age: 3,
+    email: ''
+}
+function getNameAgeEmail({name, age, email = '없음'}) {
+    // const {name, age} = props
+    return `${name}이 나이는 ${age}살이고 이메일은 ${email}입니다.`
+}
+console.log(getNameAgeEmail(user4))
+
+// 배열 구조 분해 할당
+const table = ['row1', 'row2', 'row3']
+function get2(props) {
+    const [, b, c] = props
+    return b
+}
+console.log(get2(table))
+
+// 화살표 함수
+const sum3 = (a, b) => {
+    return a + b
+}
+console.log(sum3(2, 3))
+const sum4 = (a, b) =>  a + b
+console.log(sum4(2, 3))
+
+// 화살표 함수(객체 데이터 반환)
+const aa = () => {
+    return {a: 1, b: 2}
+}
+const bb = () => ({a: 1, b: 2})
+
+// 화살표 함수(배열 데이터 반환)
+const cc = () => {
+    return [1, 2, 3]
+}
+const dd = () => [1, 2, 3]
