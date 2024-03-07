@@ -192,6 +192,15 @@ const y = () => {
 }
 x(y)
 
+const A = (B) => {
+    B()
+    console.log('a')
+}
+const B = () => {
+    console.log('b')
+}
+A(B)
+
 // setTimeout 콜백 함수
 const sum3 = (a, b, c) => {
     setTimeout(() => {
@@ -199,3 +208,81 @@ const sum3 = (a, b, c) => {
     }, 1000)
 }
 sum3(1, 2, (value) => {console.log(value)})
+
+const sum4 = (a, b, c) => {
+    setTimeout(() => {
+        return c(a + b)
+    }, 2000)
+}
+sum4(1, 5, (d) => {console.log(d)})
+
+// 재귀 함수
+// 재귀 함수란 함수 내부에서 자기 자신을 호출하는 반복함수이다.
+let i = 0
+const aaa = () => {
+    console.log('aaa')
+    i++
+    if (i < 5) {
+        aaa()
+    }
+}
+aaa()
+const userA = {
+    name: 'A',
+    parent: null
+}
+const userB = {
+    name: 'B',
+    parent: userA
+}
+const userC = {
+    name: 'C',
+    parent: userB
+}
+const userD = {
+    name: 'D',
+    parent: userC
+}
+const getRootUser = (props) => {
+    if (props.parent) {
+        return getRootUser(props.parent)
+    }
+    return props
+}
+console.log(getRootUser(userD))
+
+// this
+// this는 함수를 어떻게 호출하느냐에 따라 this가 가리키는 대상이 달라진다.
+// 일반 함수는 호출 위치에 따라 this가 결정된다.
+// 화살표 함수는 자신이 선언된 함수 범위에서 this가 정해진다.(쓰지 말 것)
+const obj = {
+    name: '아메리카노',
+    price: 4000,
+    front() {
+        return `${this.name}의 가격은 ${this.price}원 입니다.`
+    }
+}
+console.log(obj.front())
+
+// const obj2 = {
+//     name: '라떼',
+//     price: 4500,
+//     front: () => {
+//         return `${this.name}의 가격은 ${this.price}원 입니다.`
+//     }
+// }
+// console.log(obj2.front())
+
+function coffee() {
+    this.name = '프라푸치노',
+    this.price = 5000
+    return {
+        name: '라떼',
+        price: 4500,
+        front: () => {
+            return `${this.name}의 가격은 ${this.price}원 입니다.`
+        }
+    }
+}
+const Coffee = coffee()
+console.log(Coffee.front())
